@@ -1,0 +1,6 @@
+method,daily MAE (units),SMAPE (%),weekly MAE (units)
+Same day last week (lag 7),8.6834,19.8135,24.7596
+Mean of last 4 same weekdays,8.1389,18.173,34.3317
+Same day last year (lag 364),8.1399,19.1215,26.4519
+Ridge regression,6.3831,16.1595,21.845
+Gradient boosting,6.1778,14.356,18.0893

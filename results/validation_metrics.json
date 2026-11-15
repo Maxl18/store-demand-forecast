@@ -1,0 +1,324 @@
+{
+  "splits": {
+    "train": "2013-01-01 .. 2017-06-30",
+    "validation": "2017-07-01 .. 2017-09-30",
+    "test": "2017-10-01 .. 2017-12-31 (not loaded by this run)",
+    "validation_week_mondays": [
+      "2017-07-03",
+      "2017-07-10",
+      "2017-07-17",
+      "2017-07-24",
+      "2017-07-31",
+      "2017-08-07",
+      "2017-08-14",
+      "2017-08-21",
+      "2017-08-28",
+      "2017-09-04",
+      "2017-09-11",
+      "2017-09-18"
+    ]
+  },
+  "features": [
+    "item",
+    "day_of_week",
+    "month",
+    "day_of_year",
+    "lag_7",
+    "lag_14",
+    "lag_21",
+    "lag_28",
+    "lag_364",
+    "mean_same_weekday_4",
+    "mean_28_lag7"
+  ],
+  "lag_days": [
+    7,
+    14,
+    21,
+    28,
+    364
+  ],
+  "training_rows": {
+    "count": 10224,
+    "first_date": "2013-12-31",
+    "last_date": "2017-06-30",
+    "rule": "dates <= 2017-06-30 and every feature present (needs 364 days of history)"
+  },
+  "smape_definition": "100 * mean(2*|F-A| / (|A|+|F|)); a row where A and F are both 0 counts as 0",
+  "forecast_clipping": "model forecasts below 0 are set to 0",
+  "overall": {
+    "baseline_lag7": {
+      "mae": 8.83288043478261,
+      "smape": 15.890845629205833,
+      "weekly_mae": 26.458333333333332
+    },
+    "baseline_mean4": {
+      "mae": 7.576766304347826,
+      "smape": 13.413630741067728,
+      "weekly_mae": 28.361979166666668
+    },
+    "baseline_lag364": {
+      "mae": 8.828804347826088,
+      "smape": 16.193907314069143,
+      "weekly_mae": 25.427083333333332
+    },
+    "ridge": {
+      "mae": 6.515649973730961,
+      "smape": 12.066267512827586,
+      "weekly_mae": 20.94933523313779
+    },
+    "hgb": {
+      "mae": 6.630017087112974,
+      "smape": 12.003324834688733,
+      "weekly_mae": 19.862238154229264
+    }
+  },
+  "per_item": {
+    "5": {
+      "baseline_lag7": {
+        "mae": 4.413043478260869,
+        "smape": 22.106849940896378,
+        "weekly_mae": 13.833333333333334
+      },
+      "baseline_mean4": {
+        "mae": 3.5815217391304346,
+        "smape": 17.5304765026359,
+        "weekly_mae": 9.875
+      },
+      "baseline_lag364": {
+        "mae": 4.641304347826087,
+        "smape": 22.979308660144454,
+        "weekly_mae": 14.333333333333334
+      },
+      "ridge": {
+        "mae": 3.795342192900489,
+        "smape": 18.537619305426574,
+        "weekly_mae": 16.781026621510716
+      },
+      "hgb": {
+        "mae": 3.241773001898451,
+        "smape": 15.985078165007158,
+        "weekly_mae": 10.349472007677202
+      }
+    },
+    "15": {
+      "baseline_lag7": {
+        "mae": 12.48913043478261,
+        "smape": 11.970187205262219,
+        "weekly_mae": 35.833333333333336
+      },
+      "baseline_mean4": {
+        "mae": 10.671195652173912,
+        "smape": 10.32904457452936,
+        "weekly_mae": 45.208333333333336
+      },
+      "baseline_lag364": {
+        "mae": 12.173913043478262,
+        "smape": 12.587243012120492,
+        "weekly_mae": 40.0
+      },
+      "ridge": {
+        "mae": 9.073625690023324,
+        "smape": 8.896585013620005,
+        "weekly_mae": 29.43969085755187
+      },
+      "hgb": {
+        "mae": 9.346889218564856,
+        "smape": 9.233636719596381,
+        "weekly_mae": 30.519844729221813
+      }
+    },
+    "16": {
+      "baseline_lag7": {
+        "mae": 6.413043478260869,
+        "smape": 21.25285591142166,
+        "weekly_mae": 16.333333333333332
+      },
+      "baseline_mean4": {
+        "mae": 5.336956521739131,
+        "smape": 17.731625264897154,
+        "weekly_mae": 13.291666666666666
+      },
+      "baseline_lag364": {
+        "mae": 5.3478260869565215,
+        "smape": 18.598218957602214,
+        "weekly_mae": 20.5
+      },
+      "ridge": {
+        "mae": 4.6134347390414145,
+        "smape": 15.587064623261432,
+        "weekly_mae": 13.907225147948225
+      },
+      "hgb": {
+        "mae": 4.809822670363553,
+        "smape": 16.316137035498326,
+        "weekly_mae": 12.435149990323922
+      }
+    },
+    "20": {
+      "baseline_lag7": {
+        "mae": 10.119565217391305,
+        "smape": 18.238912131776868,
+        "weekly_mae": 27.583333333333332
+      },
+      "baseline_mean4": {
+        "mae": 8.831521739130435,
+        "smape": 16.306708284895873,
+        "weekly_mae": 30.9375
+      },
+      "baseline_lag364": {
+        "mae": 9.684782608695652,
+        "smape": 17.737030403443104,
+        "weekly_mae": 21.333333333333332
+      },
+      "ridge": {
+        "mae": 7.520366183387922,
+        "smape": 13.896675117602822,
+        "weekly_mae": 24.267725902115235
+      },
+      "hgb": {
+        "mae": 7.951245533447078,
+        "smape": 14.582770331602587,
+        "weekly_mae": 27.83382177909432
+      }
+    },
+    "25": {
+      "baseline_lag7": {
+        "mae": 10.826086956521738,
+        "smape": 11.620346003266707,
+        "weekly_mae": 23.083333333333332
+      },
+      "baseline_mean4": {
+        "mae": 9.769021739130435,
+        "smape": 10.361102561540395,
+        "weekly_mae": 36.291666666666664
+      },
+      "baseline_lag364": {
+        "mae": 11.032608695652174,
+        "smape": 12.053479457165745,
+        "weekly_mae": 26.333333333333332
+      },
+      "ridge": {
+        "mae": 7.923930139263091,
+        "smape": 8.450724719023233,
+        "weekly_mae": 17.32153720662484
+      },
+      "hgb": {
+        "mae": 8.398563277926025,
+        "smape": 8.913623149054512,
+        "weekly_mae": 15.12030904336775
+      }
+    },
+    "31": {
+      "baseline_lag7": {
+        "mae": 9.391304347826088,
+        "smape": 13.852774716266577,
+        "weekly_mae": 31.833333333333332
+      },
+      "baseline_mean4": {
+        "mae": 7.516304347826087,
+        "smape": 11.079792845660954,
+        "weekly_mae": 37.229166666666664
+      },
+      "baseline_lag364": {
+        "mae": 10.184782608695652,
+        "smape": 15.267369603154728,
+        "weekly_mae": 25.0
+      },
+      "ridge": {
+        "mae": 6.572298429229427,
+        "smape": 9.77548145118972,
+        "weekly_mae": 20.348795823368704
+      },
+      "hgb": {
+        "mae": 6.421575481198605,
+        "smape": 9.492797707872569,
+        "weekly_mae": 21.61448419134739
+      }
+    },
+    "33": {
+      "baseline_lag7": {
+        "mae": 10.608695652173912,
+        "smape": 12.694042381279955,
+        "weekly_mae": 45.333333333333336
+      },
+      "baseline_mean4": {
+        "mae": 9.673913043478262,
+        "smape": 11.456891677172031,
+        "weekly_mae": 39.729166666666664
+      },
+      "baseline_lag364": {
+        "mae": 10.423913043478262,
+        "smape": 12.880197033168256,
+        "weekly_mae": 36.416666666666664
+      },
+      "ridge": {
+        "mae": 7.5582162404684095,
+        "smape": 9.086910566269086,
+        "weekly_mae": 27.621747132400827
+      },
+      "hgb": {
+        "mae": 7.9821025606049805,
+        "smape": 9.685758325312568,
+        "weekly_mae": 28.21749493101585
+      }
+    },
+    "42": {
+      "baseline_lag7": {
+        "mae": 6.4021739130434785,
+        "smape": 15.39079674347628,
+        "weekly_mae": 17.833333333333332
+      },
+      "baseline_mean4": {
+        "mae": 5.233695652173913,
+        "smape": 12.51340421721016,
+        "weekly_mae": 14.333333333333334
+      },
+      "baseline_lag364": {
+        "mae": 7.141304347826087,
+        "smape": 17.44841138575415,
+        "weekly_mae": 19.5
+      },
+      "ridge": {
+        "mae": 5.067986175533616,
+        "smape": 12.299079306227814,
+        "weekly_mae": 17.906933173581894
+      },
+      "hgb": {
+        "mae": 4.888164952900249,
+        "smape": 11.816797243565771,
+        "weekly_mae": 12.80732856178586
+      }
+    }
+  },
+  "n_daily_rows": 736,
+  "n_item_weeks": 96,
+  "headline_model": "hgb",
+  "headline_rule": "lowest total order cost on the 96 validation item-weeks at the default cost ratio 3:1 (short 3 : over 1), each model with its own buffer tuned on validation",
+  "headline_source": "results/headline_model.json (user decision D8; see its disclosure)",
+  "lowest_daily_mae_model": "ridge",
+  "lowest_daily_mae_note": "the rule fixed before the validation results (lowest overall daily MAE) picks this model; it was replaced by the order-cost rule after the validation results were seen",
+  "lowest_daily_mae_reason": "ridge has the lowest overall daily MAE of the two models (6.516) and beats the best baseline baseline_mean4 (7.577) by 14.0%.",
+  "best_baseline": "baseline_mean4",
+  "mae_gain_vs_best_baseline": 1.0611163306168647,
+  "mae_gain_vs_best_baseline_pct": 14.0048707851522,
+  "train_in_sample_mae": {
+    "ridge": 5.953791413131531,
+    "hgb": 4.910772747003748
+  },
+  "hyperparameters": {
+    "ridge": {
+      "alpha": 1.0
+    },
+    "hgb": {
+      "learning_rate": 0.1,
+      "max_iter": 100,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 20,
+      "early_stopping": false,
+      "random_state": 0
+    }
+  },
+  "hyperparameter_search": "none: library defaults (hgb early_stopping turned off)",
+  "random_seed": 0
+}

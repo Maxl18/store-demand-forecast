@@ -1,0 +1,7 @@
+measure,model,model value,pre-fixed baseline,baseline value,difference,difference %,verdict
+daily MAE (units),Gradient boosting,6.1778,Mean of last 4 same weekdays,8.1389,-1.9612,-24.096,model better
+daily MAE (units),Ridge regression,6.3831,Mean of last 4 same weekdays,8.1389,-1.7558,-21.5728,model better
+SMAPE (%),Gradient boosting,14.356,Mean of last 4 same weekdays,18.173,-3.817,-21.0036,model better
+SMAPE (%),Ridge regression,16.1595,Mean of last 4 same weekdays,18.173,-2.0135,-11.0796,model better
+weekly MAE (units),Gradient boosting,18.0893,Same day last year (lag 364),26.4519,-8.3626,-31.6144,model better
+weekly MAE (units),Ridge regression,21.845,Same day last year (lag 364),26.4519,-4.6069,-17.4161,model better

@@ -1,0 +1,13 @@
+ratio,buffer,model,pre-fixed baseline,model cost,baseline cost,difference,difference %,95% interval,weeks model cheaper,interval includes 0
+1:1,tuned,Gradient boosting,Same day last year (lag 364),1826,2445,-619,-25.3,-878 to -339,12 of 13,False
+1:1,tuned,Ridge regression,Same day last year (lag 364),2278,2445,-167,-6.8,-516 to 186,8 of 13,True
+1:1,zero,Gradient boosting,Same day last year (lag 364),1885,2751,-866,-31.5,-1189 to -526,12 of 13,False
+1:1,zero,Ridge regression,Same day last year (lag 364),2278,2751,-473,-17.2,-970 to 23,10 of 13,True
+3:1,tuned,Gradient boosting,Same day last year (lag 364),3100,4188,-1088,-26.0,-1565 to -574,11 of 13,False
+3:1,tuned,Ridge regression,Same day last year (lag 364),3972,4188,-216,-5.2,-1131 to 776,7 of 13,True
+3:1,zero,Gradient boosting,Mean of last 4 same weekdays,4403,5043,-640,-12.7,-2045 to 565,7 of 13,True
+3:1,zero,Ridge regression,Mean of last 4 same weekdays,5036,5043,-7,-0.1,-1685 to 1657,7 of 13,True
+5:1,tuned,Gradient boosting,Same day last year (lag 364),3700,4991,-1291,-25.9,-1982 to -525,10 of 13,False
+5:1,tuned,Ridge regression,Same day last year (lag 364),5102,4991,111,2.2,-1304 to 1678,8 of 13,True
+5:1,zero,Gradient boosting,Mean of last 4 same weekdays,6921,6507,414,6.4,-1390 to 2066,6 of 13,True
+5:1,zero,Ridge regression,Mean of last 4 same weekdays,7794,6507,1287,19.8,-1239 to 3908,7 of 13,True

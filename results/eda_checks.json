@@ -1,0 +1,347 @@
+{
+  "data_quality": {
+    "rows": 867000,
+    "date_min": "2013-01-01",
+    "date_max": "2017-09-30",
+    "calendar_days_in_range": 1734,
+    "n_series": 500,
+    "series_with_missing_dates": 0,
+    "total_missing_dates": 0,
+    "duplicate_keys": 0,
+    "missing_values": 0,
+    "negative_sales_rows": 0,
+    "zero_sales_rows": 1,
+    "sales_min": 0,
+    "sales_max": 231,
+    "all_sales_whole_numbers": true,
+    "zero_sales_detail": [
+      {
+        "date": "2014-01-15",
+        "store": 6,
+        "item": 4
+      }
+    ]
+  },
+  "seasonality_per_item": [
+    {
+      "item": 5,
+      "weekday_max_over_min": 1.5018351685018352,
+      "best_weekday": "Sun",
+      "worst_weekday": "Mon",
+      "month_max_over_min": 1.763106525376464,
+      "best_month": "Jul",
+      "worst_month": "Jan",
+      "weekday_variance_share": 0.121345679280801,
+      "month_variance_share": 0.2725350308317364
+    },
+    {
+      "item": 15,
+      "weekday_max_over_min": 1.519878099459759,
+      "best_weekday": "Sun",
+      "worst_weekday": "Mon",
+      "month_max_over_min": 1.8198248501234278,
+      "best_month": "Jul",
+      "worst_month": "Jan",
+      "weekday_variance_share": 0.217257129487788,
+      "month_variance_share": 0.4589546022994863
+    },
+    {
+      "item": 16,
+      "weekday_max_over_min": 1.4923990498812352,
+      "best_weekday": "Sun",
+      "worst_weekday": "Mon",
+      "month_max_over_min": 1.9160272804774083,
+      "best_month": "Jul",
+      "worst_month": "Jan",
+      "weekday_variance_share": 0.15655154757220108,
+      "month_variance_share": 0.34152780409483735
+    },
+    {
+      "item": 20,
+      "weekday_max_over_min": 1.497465145754119,
+      "best_weekday": "Sun",
+      "worst_weekday": "Mon",
+      "month_max_over_min": 1.8426092834610184,
+      "best_month": "Jul",
+      "worst_month": "Jan",
+      "weekday_variance_share": 0.19110746125638087,
+      "month_variance_share": 0.40137355901907457
+    },
+    {
+      "item": 25,
+      "weekday_max_over_min": 1.5216103304215722,
+      "best_weekday": "Sun",
+      "worst_weekday": "Mon",
+      "month_max_over_min": 1.8239929374836514,
+      "best_month": "Jul",
+      "worst_month": "Jan",
+      "weekday_variance_share": 0.21753665629446003,
+      "month_variance_share": 0.4516874696879525
+    },
+    {
+      "item": 31,
+      "weekday_max_over_min": 1.5435444899674333,
+      "best_weekday": "Sun",
+      "worst_weekday": "Mon",
+      "month_max_over_min": 1.8460010832280196,
+      "best_month": "Jul",
+      "worst_month": "Jan",
+      "weekday_variance_share": 0.2081833405941511,
+      "month_variance_share": 0.41728255579659257
+    },
+    {
+      "item": 33,
+      "weekday_max_over_min": 1.4867960825463449,
+      "best_weekday": "Sun",
+      "worst_weekday": "Mon",
+      "month_max_over_min": 1.8055764034824378,
+      "best_month": "Jul",
+      "worst_month": "Jan",
+      "weekday_variance_share": 0.20910834687962387,
+      "month_variance_share": 0.44648996455437756
+    },
+    {
+      "item": 42,
+      "weekday_max_over_min": 1.4730901357762145,
+      "best_weekday": "Sun",
+      "worst_weekday": "Mon",
+      "month_max_over_min": 1.7831463905665803,
+      "best_month": "Jul",
+      "worst_month": "Jan",
+      "weekday_variance_share": 0.1661333213601878,
+      "month_variance_share": 0.36613552784320114
+    }
+  ],
+  "seasonality_chosen_total": {
+    "mean_by_weekday": {
+      "Mon": 298.15384615384613,
+      "Tue": 347.5787234042553,
+      "Wed": 349.0085106382979,
+      "Thu": 372.8978723404255,
+      "Fri": 397.2808510638298,
+      "Sat": 421.7692307692308,
+      "Sun": 449.8974358974359
+    },
+    "weekday_max_over_min": 1.5089439284485726,
+    "mean_by_month": {
+      "Jan": 260.6967741935484,
+      "Feb": 288.8581560283688,
+      "Mar": 349.61290322580646,
+      "Apr": 406.1933333333333,
+      "May": 434.5032258064516,
+      "Jun": 461.7,
+      "Jul": 475.5806451612903,
+      "Aug": 422.44354838709677,
+      "Sep": 393.225,
+      "Oct": 363.31451612903226,
+      "Nov": 392.775,
+      "Dec": 280.991935483871
+    },
+    "month_max_over_min": 1.8242674717877647,
+    "weekday_variance_share": 0.2530798394508522,
+    "month_variance_share": 0.5340663027271553,
+    "year_variance_share": 0.14376262204419044,
+    "month_note": "Month figures use all training days: Jan-Jun cover 5 years (2013-2017), Jul-Dec cover 4 years (2013-2016). With a rising trend this slightly biases the month ratio and the month variance share. See seasonality_chosen_total_full_years_2013_2016 for the same numbers on equal years."
+  },
+  "seasonality_chosen_total_full_years_2013_2016": {
+    "mean_by_month": {
+      "Jan": 251.1451612903226,
+      "Feb": 278.6725663716814,
+      "Mar": 338.7903225806452,
+      "Apr": 392.5083333333333,
+      "May": 422.7741935483871,
+      "Jun": 446.375,
+      "Jul": 475.5806451612903,
+      "Aug": 422.44354838709677,
+      "Sep": 393.225,
+      "Oct": 363.31451612903226,
+      "Nov": 392.775,
+      "Dec": 280.991935483871
+    },
+    "month_max_over_min": 1.8936484490398817,
+    "month_variance_share": 0.5450543768586634
+  },
+  "trend_chosen_total": {
+    "total_sales_by_full_year": {
+      "2013": 116552,
+      "2014": 134545,
+      "2015": 139909,
+      "2016": 152295
+    },
+    "yoy_growth_full_years": {
+      "2014_vs_2013": 0.1543774452604847,
+      "2015_vs_2014": 0.03986770225575076,
+      "2016_vs_2015": 0.08852897240349078
+    },
+    "jan_jun_total_by_year": {
+      "2013": 55165,
+      "2014": 64050,
+      "2015": 66122,
+      "2016": 72395,
+      "2017": 75127
+    },
+    "yoy_growth_jan_jun_2017_vs_2016": 0.037737412804751624
+  },
+  "trend_per_item_jan_jun_2017_vs_2016": {
+    "5": 0.04234629861982442,
+    "15": 0.03329582312835111,
+    "16": 0.018935978358881833,
+    "20": 0.07560483870967749,
+    "25": 0.022717375526201122,
+    "31": 0.032479322170667846,
+    "33": 0.044204988969964276,
+    "42": 0.04064000000000001
+  },
+  "trend_store1_all_items": {
+    "2014_vs_2013": 0.15176919647832388,
+    "2015_vs_2014": 0.0422406765474983,
+    "2016_vs_2015": 0.08794490025646673
+  },
+  "trend_all_stores_all_items": {
+    "2014_vs_2013": 0.15038439196483466,
+    "2015_vs_2014": 0.04393911563724817,
+    "2016_vs_2015": 0.08601056088847447
+  },
+  "outliers_store1_train": {
+    "rule": "abs(z) > 4 where z standardises (sales - 28-day centred mean * weekday factor)",
+    "n_series_checked": 50,
+    "n_rows_checked": 82100,
+    "n_flagged": 17,
+    "flagged_rows": [
+      {
+        "item": 1,
+        "date": "2017-06-28",
+        "sales": 50,
+        "z_score": 5.145079142852981
+      },
+      {
+        "item": 48,
+        "date": "2016-07-05",
+        "sales": 94,
+        "z_score": 4.980175146077851
+      },
+      {
+        "item": 2,
+        "date": "2017-05-28",
+        "sales": 48,
+        "z_score": -4.933398636869264
+      },
+      {
+        "item": 32,
+        "date": "2016-11-20",
+        "sales": 81,
+        "z_score": 4.606273708176149
+      },
+      {
+        "item": 13,
+        "date": "2017-05-27",
+        "sales": 65,
+        "z_score": -4.533243845320227
+      },
+      {
+        "item": 26,
+        "date": "2016-06-18",
+        "sales": 96,
+        "z_score": 4.528720652946165
+      },
+      {
+        "item": 42,
+        "date": "2014-09-21",
+        "sales": 65,
+        "z_score": 4.461086194036301
+      },
+      {
+        "item": 14,
+        "date": "2016-09-10",
+        "sales": 104,
+        "z_score": 4.291250339931489
+      },
+      {
+        "item": 45,
+        "date": "2015-05-02",
+        "sales": 127,
+        "z_score": 4.273779492775314
+      },
+      {
+        "item": 10,
+        "date": "2014-11-28",
+        "sales": 102,
+        "z_score": 4.250488087054824
+      }
+    ]
+  },
+  "noise_dispersion_store1_train": {
+    "note": "residual variance / mean expected sales per item; about 1 means pure counting noise",
+    "min": 0.9094356464684435,
+    "median": 1.02255961274835,
+    "max": 1.128663999579842
+  },
+  "regularity_train": {
+    "weekday_profile_corr_between_items_store1": {
+      "min": 0.9730661146731968,
+      "median": 0.9957951116355483
+    },
+    "sunday_factor_by_store": {
+      "1": 1.190456377480875,
+      "2": 1.1896617420745526,
+      "3": 1.1890066310217182,
+      "4": 1.1900009862882974,
+      "5": 1.1890655863329067,
+      "6": 1.1870238572745306,
+      "7": 1.188882471821192,
+      "8": 1.1913647969630496,
+      "9": 1.1888190734224258,
+      "10": 1.1902673929078365
+    },
+    "store_daily_total_corr_between_stores": {
+      "min": 0.9909552978471118,
+      "median": 0.9932319364949634,
+      "max": 0.9948354668418138
+    }
+  },
+  "full_weeks": {
+    "validation": {
+      "period": "2017-07-01 to 2017-09-30 (92 days, first day is a Saturday, last day is a Saturday)",
+      "n_full_weeks": 12,
+      "first_monday": "2017-07-03",
+      "last_monday": "2017-09-18",
+      "last_sunday_of_last_full_week": "2017-09-24",
+      "days_in_full_weeks": 84,
+      "days_left_over_outside_full_weeks": 8
+    },
+    "test": {
+      "period": "2017-10-01 to 2017-12-31 (92 days, first day is a Sunday, last day is a Sunday)",
+      "n_full_weeks": 13,
+      "first_monday": "2017-10-02",
+      "last_monday": "2017-12-25",
+      "last_sunday_of_last_full_week": "2017-12-31",
+      "days_in_full_weeks": 91,
+      "days_left_over_outside_full_weeks": 1
+    }
+  },
+  "scope": {
+    "store": 1,
+    "items": [
+      5,
+      15,
+      16,
+      20,
+      25,
+      31,
+      33,
+      42
+    ],
+    "selection_rule": "Store 1. Rank the 50 items by mean daily sales in the training period (lowest to highest). Take 8 items evenly spaced along that ranking: rank positions round(linspace(0, 49, 8)) = 0, 7, 14, 21, 28, 35, 42, 49 (0 = lowest volume, 49 = highest volume).",
+    "selection_period": "2013-01-01 to 2017-06-30 (training period only)"
+  },
+  "chosen_items_low_to_high_with_train_mean": {
+    "5": 16.342265529841658,
+    "16": 22.90438489646772,
+    "42": 32.52862362971985,
+    "20": 42.11875761266748,
+    "31": 51.91169305724726,
+    "33": 61.47259439707673,
+    "25": 71.28867235079171,
+    "15": 78.06394640682095
+  }
+}

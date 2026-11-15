@@ -1,2 +1,2 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Store files byte for byte: the run guard fingerprints the raw bytes of the frozen input files
+* -text

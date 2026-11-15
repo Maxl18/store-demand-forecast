@@ -1,0 +1,105 @@
+{
+  "log_version": 1,
+  "note": "Append-only log of every attempt to run the final test. Entries are never deleted or edited; each one stores the fingerprint of the one before it.",
+  "entries": [
+    {
+      "seq": 1,
+      "time": "2026-11-15T20:45:52",
+      "event": "started",
+      "run": 1,
+      "first_run": true,
+      "frozen_inputs": {
+        "results/scope.json": "B49F56A661AFD8F98E82A2D119961A8E50E1B7DCEEB98AA0633A94F95911CE76",
+        "results/buffers.json": "1506264A61EE7C6BDA6E4C1E87E8B09CD1A716D835975A15EDD2548BF2A75F24",
+        "results/headline_model.json": "9A8483E31E4C1388A386318147901258FF01362AF45E0D37E28762AF85FF106E",
+        "results/validation_metrics.json": "7978CD607952481CD8D5BDEB51F28DDA00231D4EAAA33BD83DE124DB843EA4CA",
+        "results/validation_predictions.csv": "FCC750487A7DBF15B15B17B7A9D86BAF574AF69D047914114731FC652F12A582",
+        "src/data_prep.py": "7C3FEA9B60AABD04EFD77B927B7D42C394A01AEEF754A4D5693A6561FC379B08",
+        "src/features.py": "A1D96265CC82D5325F0DFB69D3ED17049F32544CE1B2DCD1351BF38127CE53E8",
+        "src/forecast.py": "6F1AA3D6CE53AC0649E0C66FF35D597ED9D8CFC0DCD0154E8677652CC40F16BE",
+        "src/simulate.py": "D266C2A47322B3F2D90EFDCC9C15547ED0A14AD9C2FF7E9654BFA43F83398B72",
+        "src/guard.py": "381470696037C6A5FDA35A15F42A3FF320F486EE2712585BFBFBA4C51120D14A",
+        "src/headline.py": "1FC12245C3D3A8BE1A50CF42442D1778482E4D712B1743B7F90A772958D08F9A",
+        "src/run_final_test.py": "5F176D3A77023E4422D251A2864AF9F30C072F5B92C7BF4944FC08E022425B06",
+        "src/failure_analysis.py": "11A483F43E23C4C6BF5330C2249A1ED03343FAADF23826EB9AC975EE83A8072A",
+        "src/run_failure_validation.py": "017C0CC83A159EAE1671DB20B74E53FE993EFEDA595641587CB5BD1991E99BDD",
+        "src/run_failure_test.py": "3F384A8E00D8287E3A58B5450169394DC2C37A70AFDB4C096A68C1779510085C",
+        "train.csv": "038F25690A65149C94F86DDD3DECEDA20C037A5CFD754CAFDFC539A72992F2ED",
+        "requirements.txt": "F1F2EAF99EEFD7426D1E50F2B305E93BF63224776A12F27DEBDD4D1F7F9A7F7B"
+      },
+      "library_versions": {
+        "python": "3.12.3",
+        "numpy": "2.5.4",
+        "pandas": "3.1.1",
+        "scikit-learn": "1.9.1"
+      },
+      "headline_model": "hgb",
+      "previous_entry_sha256": null
+    },
+    {
+      "seq": 2,
+      "time": "2026-11-15T20:45:53",
+      "event": "finished",
+      "run": 1,
+      "outputs": {
+        "test_predictions.csv": "069B6E130131D0A781BD3B49A6C90417D75C10FE727A2917E61DCE36B2928645",
+        "test_metrics.json": "CF093CE2A01B8631E28926CB0132093FD34AEF021D169B3354F7B18673A7867A",
+        "simulation_test.json": "5B3EA8E685D3B9D2821CA11AAFB61F771D86BA9FBEDEC23E05D2FF0C8518DAE1",
+        "simulation_test.csv": "481C852407CFB6C6250FC09E16C434FD858F26F6E99D54F9E4A505640A4D8E4B"
+      },
+      "verified_against_run": null,
+      "note": "first completed run; its outputs are the reference",
+      "previous_entry_sha256": "6EEC86412EE9C7280A9B3595AA9D611E4D42E0122650CD1C8B16780D2E9497EC"
+    },
+    {
+      "seq": 3,
+      "time": "2026-11-15T20:47:06",
+      "event": "started",
+      "run": 2,
+      "first_run": false,
+      "frozen_inputs": {
+        "results/scope.json": "B49F56A661AFD8F98E82A2D119961A8E50E1B7DCEEB98AA0633A94F95911CE76",
+        "results/buffers.json": "1506264A61EE7C6BDA6E4C1E87E8B09CD1A716D835975A15EDD2548BF2A75F24",
+        "results/headline_model.json": "9A8483E31E4C1388A386318147901258FF01362AF45E0D37E28762AF85FF106E",
+        "results/validation_metrics.json": "7978CD607952481CD8D5BDEB51F28DDA00231D4EAAA33BD83DE124DB843EA4CA",
+        "results/validation_predictions.csv": "FCC750487A7DBF15B15B17B7A9D86BAF574AF69D047914114731FC652F12A582",
+        "src/data_prep.py": "7C3FEA9B60AABD04EFD77B927B7D42C394A01AEEF754A4D5693A6561FC379B08",
+        "src/features.py": "A1D96265CC82D5325F0DFB69D3ED17049F32544CE1B2DCD1351BF38127CE53E8",
+        "src/forecast.py": "6F1AA3D6CE53AC0649E0C66FF35D597ED9D8CFC0DCD0154E8677652CC40F16BE",
+        "src/simulate.py": "D266C2A47322B3F2D90EFDCC9C15547ED0A14AD9C2FF7E9654BFA43F83398B72",
+        "src/guard.py": "381470696037C6A5FDA35A15F42A3FF320F486EE2712585BFBFBA4C51120D14A",
+        "src/headline.py": "1FC12245C3D3A8BE1A50CF42442D1778482E4D712B1743B7F90A772958D08F9A",
+        "src/run_final_test.py": "5F176D3A77023E4422D251A2864AF9F30C072F5B92C7BF4944FC08E022425B06",
+        "src/failure_analysis.py": "11A483F43E23C4C6BF5330C2249A1ED03343FAADF23826EB9AC975EE83A8072A",
+        "src/run_failure_validation.py": "017C0CC83A159EAE1671DB20B74E53FE993EFEDA595641587CB5BD1991E99BDD",
+        "src/run_failure_test.py": "3F384A8E00D8287E3A58B5450169394DC2C37A70AFDB4C096A68C1779510085C",
+        "train.csv": "038F25690A65149C94F86DDD3DECEDA20C037A5CFD754CAFDFC539A72992F2ED",
+        "requirements.txt": "F1F2EAF99EEFD7426D1E50F2B305E93BF63224776A12F27DEBDD4D1F7F9A7F7B"
+      },
+      "library_versions": {
+        "python": "3.12.3",
+        "numpy": "2.5.4",
+        "pandas": "3.1.1",
+        "scikit-learn": "1.9.1"
+      },
+      "headline_model": "hgb",
+      "previous_entry_sha256": "01291F0E396B46D1619764FB11300CB1A5572CBB15C3195FDA208FE39F74F15E"
+    },
+    {
+      "seq": 4,
+      "time": "2026-11-15T20:47:07",
+      "event": "finished",
+      "run": 2,
+      "outputs": {
+        "test_predictions.csv": "069B6E130131D0A781BD3B49A6C90417D75C10FE727A2917E61DCE36B2928645",
+        "test_metrics.json": "CF093CE2A01B8631E28926CB0132093FD34AEF021D169B3354F7B18673A7867A",
+        "simulation_test.json": "5B3EA8E685D3B9D2821CA11AAFB61F771D86BA9FBEDEC23E05D2FF0C8518DAE1",
+        "simulation_test.csv": "481C852407CFB6C6250FC09E16C434FD858F26F6E99D54F9E4A505640A4D8E4B"
+      },
+      "verified_against_run": 1,
+      "restored_files": [],
+      "note": "deterministic recompute; outputs identical to the reference run",
+      "previous_entry_sha256": "6E882ED401A19C1DE51CC5AB121D4EAF2E1F0D4E125B624A2825A5CEB958CC6F"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+month,n_rows,mean_sales,ridge_mae,ridge_bias,ridge_bias_pct,hgb_mae,hgb_bias,hgb_bias_pct,baseline_mean4_mae,baseline_mean4_bias,baseline_mean4_bias_pct
+2017-07,248,68.5,7.4174,-0.1779,-0.26,7.5722,-0.2835,-0.41,7.7571,-1.7792,-2.6
+2017-08,248,61.04,6.4794,-0.9422,-1.54,6.3878,-1.1397,-1.87,7.9476,3.7581,6.16
+2017-09,240,57.08,5.6213,0.3046,0.53,5.9067,0.2637,0.46,7.0073,3.2406,5.68

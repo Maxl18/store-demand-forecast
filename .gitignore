@@ -1,0 +1,7 @@
+.venv/
+test.csv
+sample_submission.csv
+data/*.csv
+__pycache__/
+.ipynb_checkpoints/
+*.pyc

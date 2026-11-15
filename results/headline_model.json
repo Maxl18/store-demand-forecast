@@ -1,0 +1,145 @@
+{
+  "frozen": true,
+  "headline_model": "hgb",
+  "headline_model_name": "gradient boosting (sklearn HistGradientBoostingRegressor)",
+  "other_model": "ridge",
+  "other_model_note": "reported next to the headline model in every table",
+  "rule": "lowest total order cost on the 96 validation item-weeks at the default cost ratio 3:1 (short 3 : over 1), each model with its own buffer tuned on validation",
+  "decided_by": "user decision D8 in PLAN.md, before any test-period data was read",
+  "decided_on": "2026-11-14",
+  "earlier_rule_replaced": "lowest overall daily MAE on validation (fixed in advance in task 03); it picked ridge (6.516 vs hgb 6.630)",
+  "disclosure": [
+    "Ridge is marginally ahead on daily MAE on validation (6.52 vs 6.63 units per day).",
+    "The selection rule was changed from daily MAE to order cost after seeing the validation results. Only validation data was used for this; the test period (2017-10-01 onward) was not read, predicted or scored when the decision was made.",
+    "Both models are reported side by side everywhere; Ridge is never dropped from a table.",
+    "The validation order costs (including hgb minus Ridge, -294) are in-sample: the buffers were tuned and scored on the same 12 weeks, so they are optimistic. The test run is the honest comparison."
+  ],
+  "validation_numbers": {
+    "source": "results/validation_metrics.json and results/simulation_validation.json",
+    "order_cost_tuned_buffer": {
+      "1:1": {
+        "baseline_lag7": 2508,
+        "baseline_mean4": 2482,
+        "baseline_lag364": 2159,
+        "ridge": 2011,
+        "hgb": 1892
+      },
+      "3:1": {
+        "baseline_lag7": 4245,
+        "baseline_mean4": 4127,
+        "baseline_lag364": 3575,
+        "ridge": 3342,
+        "hgb": 3048
+      },
+      "5:1": {
+        "baseline_lag7": 5167,
+        "baseline_mean4": 4940,
+        "baseline_lag364": 4161,
+        "ridge": 4108,
+        "hgb": 3621
+      }
+    },
+    "order_cost_zero_buffer": {
+      "1:1": {
+        "baseline_lag7": 2540,
+        "baseline_mean4": 2727,
+        "baseline_lag364": 2441,
+        "ridge": 2011,
+        "hgb": 1907
+      },
+      "3:1": {
+        "baseline_lag7": 4580,
+        "baseline_mean4": 4251,
+        "baseline_lag364": 6289,
+        "ridge": 4221,
+        "hgb": 4121
+      },
+      "5:1": {
+        "baseline_lag7": 6620,
+        "baseline_mean4": 5775,
+        "baseline_lag364": 10137,
+        "ridge": 6431,
+        "hgb": 6335
+      }
+    },
+    "tuned_buffers": {
+      "1:1": {
+        "baseline_lag7": -0.01,
+        "baseline_mean4": -0.04,
+        "baseline_lag364": 0.03,
+        "ridge": 0.0,
+        "hgb": 0.01
+      },
+      "3:1": {
+        "baseline_lag7": 0.04,
+        "baseline_mean4": 0.02,
+        "baseline_lag364": 0.08,
+        "ridge": 0.04,
+        "hgb": 0.04
+      },
+      "5:1": {
+        "baseline_lag7": 0.05,
+        "baseline_mean4": 0.05,
+        "baseline_lag364": 0.1,
+        "ridge": 0.06,
+        "hgb": 0.06
+      }
+    },
+    "daily_mae": {
+      "baseline_lag7": 8.83288043478261,
+      "baseline_mean4": 7.576766304347826,
+      "baseline_lag364": 8.828804347826088,
+      "ridge": 6.515649973730961,
+      "hgb": 6.630017087112974
+    },
+    "smape": {
+      "baseline_lag7": 15.890845629205833,
+      "baseline_mean4": 13.413630741067728,
+      "baseline_lag364": 16.193907314069143,
+      "ridge": 12.066267512827586,
+      "hgb": 12.003324834688733
+    },
+    "weekly_mae": {
+      "baseline_lag7": 26.458333333333332,
+      "baseline_mean4": 28.361979166666668,
+      "baseline_lag364": 25.427083333333332,
+      "ridge": 20.94933523313779,
+      "hgb": 19.862238154229264
+    },
+    "headline_minus_other_model_cost_3to1_tuned": {
+      "total_difference": -294.0,
+      "ci95_low": -496.025,
+      "ci95_high": -86.0,
+      "share_of_resamples_a_cheaper": 0.9976,
+      "weeks_a_cheaper": 10,
+      "weeks_b_cheaper": 2,
+      "weeks_tied": 0,
+      "n_weeks": 12,
+      "n_boot": 10000,
+      "seed": 0,
+      "model_a": "hgb",
+      "model_b": "ridge"
+    }
+  },
+  "comparison_baselines_fixed_from_validation": {
+    "note": "Fixed on validation before the test run, so the test tables cannot pick the comparison after seeing test results. All baselines are still reported.",
+    "order_cost": {
+      "1:1": {
+        "tuned_buffer": "baseline_lag364",
+        "zero_buffer": "baseline_lag364"
+      },
+      "3:1": {
+        "tuned_buffer": "baseline_lag364",
+        "zero_buffer": "baseline_mean4"
+      },
+      "5:1": {
+        "tuned_buffer": "baseline_lag364",
+        "zero_buffer": "baseline_mean4"
+      }
+    },
+    "daily_mae": "baseline_mean4",
+    "smape": "baseline_mean4",
+    "weekly_mae": "baseline_lag364"
+  },
+  "headline_ratio": "3:1"
+}
